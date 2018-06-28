@@ -11,6 +11,7 @@
     <modules>
         <module>mp01</module>
         <module>mp02</module>
+        <module>mp03</module>
     </modules>
 
     <dependencies>
@@ -44,6 +45,24 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.37</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+            <version>2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.7</version>
+        </dependency>
+
         <!--spring-->
         <dependency>
             <groupId>org.springframework</groupId>

@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mp01" />
         <module name="mp02" />
+        <module name="mp03" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mp" target="1.5" />
       <module name="mp01" target="1.5" />
       <module name="mp02" target="1.5" />
+      <module name="mp03" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
