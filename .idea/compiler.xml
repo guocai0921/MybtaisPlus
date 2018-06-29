@@ -9,6 +9,7 @@
         <module name="mp01" />
         <module name="mp02" />
         <module name="mp03" />
+        <module name="mp04" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,6 +17,7 @@
       <module name="mp01" target="1.5" />
       <module name="mp02" target="1.5" />
       <module name="mp03" target="1.5" />
+      <module name="mp04" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -12,6 +12,7 @@
         <module>mp01</module>
         <module>mp02</module>
         <module>mp03</module>
+        <module>mp04</module>
     </modules>
 
     <dependencies>

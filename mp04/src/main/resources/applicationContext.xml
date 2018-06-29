@@ -58,6 +58,7 @@
 
         <!-- 全局的表前缀策略配置 -->
         <property name="tablePrefix" value="tbl_"></property>
+
     </bean>
 
     <!--配置 mybatis 扫描 mapper接口的路径 接口的路径-->
