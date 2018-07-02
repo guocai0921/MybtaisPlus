@@ -71,7 +71,12 @@
         <!-- 全局的表前缀策略配置 -->
         <property name="tablePrefix" value="tbl_"></property>
 
+        <!-- 注入自定义全局操作 -->
+        <property name="sqlInjector" ref="mySqlInjector"></property>
     </bean>
+
+    <!-- 定义自定义注入器 -->
+    <bean id="mySqlInjector" class="com.guocai.mp.injector.MySqlInjector"></bean>
 
     <!--配置 mybatis 扫描 mapper接口的路径 接口的路径-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">

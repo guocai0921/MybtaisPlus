@@ -25,6 +25,69 @@ public class TestMP {
 	ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
 	EmployeeMapper employeeMapper = ac.getBean("employeeMapper",EmployeeMapper.class);
 
+	/**
+	 * @Description: 乐观锁插件
+	 * @auther: Sun Guocai
+	 * @date:   2018/7/2 8:47
+	 * @name:   testOptimisticLockerInterceptor
+	 * @param:  []
+	 * @return: void
+	 *
+	 */
+	@Test
+	public void testOptimisticLockerInterceptor(){
+		Employee employee = new Employee();
+		employee.setLastName("吉泽老师");
+		employee.setGender("2");
+		employee.setAge(30);
+		employee.setEmail("jize@guocai.com");
+		employee.setVersion(1);
+		employee.insert();
+	}
+
+	/**
+	 * @Description: 性能分析插件
+	 * @auther: Sun Guocai
+	 * @date:   2018/7/2 8:33
+	 * @name:   testPerformanceInterceptor
+	 * @param:  []
+	 * @return: void
+	 *
+	 */
+	@Test
+	public void testPerformanceInterceptor(){
+		Employee employee = new Employee();
+		employee.setLastName("苍老师");
+		employee.setEmail("cang@guocai.com");
+		employee.setAge(34);
+		employee.setGender("2");
+		Integer insert = employeeMapper.insert(employee);
+		System.out.println("insert = " + insert);
+	}
+
+	/**
+	 * @Description: 执行分析插件
+	 * @auther: Sun Guocai
+	 * @date:   2018/7/2 8:29
+	 * @name:   testSqlExplain
+	 * @param:  []
+	 * @return: void
+	 *
+	 */
+	@Test
+	public void testSqlExplain(){
+		employeeMapper.delete(null);
+	}
+
+	/**
+	 * @Description: 分页插件
+	 * @auther: Sun Guocai
+	 * @date:   2018/7/2 8:18
+	 * @name:   testSelectPage
+	 * @param:  []
+	 * @return: void
+	 *
+	 */
 	@Test
 	public void testSelectPage(){
 		//List<Employee> employees = employeeMapper.selectPage(new Page<Employee>(2, 3), null);
