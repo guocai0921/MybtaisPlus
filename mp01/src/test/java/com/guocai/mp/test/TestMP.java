@@ -19,7 +19,7 @@ import java.util.Map;
  * java类简单作用描述
  *
  * @ClassName: TestMP
- * @Package: com.guocai.mp.test
+ * @Package: com.guocai.mp.mp
  * @Description: <  >
  * @Author: Sun GuoCai
  * @CreateDate: 2018/6/27 14:06

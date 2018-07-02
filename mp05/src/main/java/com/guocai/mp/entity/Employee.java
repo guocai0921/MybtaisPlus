@@ -1,12 +1,12 @@
 package com.guocai.mp.entity;
 
 import com.baomidou.mybatisplus.activerecord.Model;
-import com.baomidou.mybatisplus.annotations.TableId;
-import com.baomidou.mybatisplus.annotations.TableName;
-import com.baomidou.mybatisplus.annotations.Version;
+import com.baomidou.mybatisplus.annotations.*;
+import com.baomidou.mybatisplus.enums.FieldFill;
 import com.baomidou.mybatisplus.enums.IdType;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
@@ -27,6 +27,13 @@ public class Employee extends Model<Employee> {
     private String email;
     private String gender;
     private Integer age;
+
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private Date updateTime;
+
+    @TableLogic
+    private Integer loginFlag;
+
     @Version
     private Integer version;
 
@@ -83,14 +90,11 @@ public class Employee extends Model<Employee> {
         return this.id;
     }
 
-    @Override
-    public String toString() {
-        return "Employee{" +
-        ", id=" + id +
-        ", lastName=" + lastName +
-        ", email=" + email +
-        ", gender=" + gender +
-        ", age=" + age +
-        "}";
+    public Integer getLoginFlag() {
+        return loginFlag;
+    }
+
+    public void setLoginFlag(Integer loginFlag) {
+        this.loginFlag = loginFlag;
     }
 }

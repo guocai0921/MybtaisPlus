@@ -11,7 +11,7 @@ import org.junit.Test;
  * java类简单作用描述
  *
  * @ClassName: TestMP
- * @Package: com.guocai.mp.test
+ * @Package: com.guocai.mp.mp
  * @Description: <  >
  * @Author: Sun GuoCai
  * @CreateDate: 2018/6/28 14:29
@@ -26,7 +26,7 @@ public class TestMP {
 		GlobalConfig globalConfig = new GlobalConfig();
 		globalConfig.setActiveRecord(true)  //是否支持AR模式
 				.setAuthor("Sun GuoCai")  //设置作者
-				.setOutputDir("D:\\idea\\IdeaProjects\\mp\\mp03\\src\\main\\java")  //设置文件生成的路径
+				.setOutputDir("D:\\idea\\IdeaProjects\\mp\\mp06\\src\\main\\java")  //设置文件生成的路径
 				.setFileOverride(true)  //设置文件多次生成是否覆盖
 				.setIdType(IdType.AUTO)  //设置主键的生成策略
 				.setServiceName("%sService") //设置生成的Service接口的名字首字母是否带I
@@ -35,19 +35,25 @@ public class TestMP {
 
 		//数据源配置
 		DataSourceConfig dataSourceConfig = new DataSourceConfig();
-		dataSourceConfig.setDbType(DbType.MYSQL)
-				.setDriverName("com.mysql.jdbc.Driver")
-				.setUrl("jdbc:mysql://localhost:3306/mybatisplus")
-				.setUsername("root")
-				.setPassword("123456");
+		dataSourceConfig
+				//.setDbType(DbType.MYSQL)
+				.setDbType(DbType.ORACLE)
+				//.setDriverName("com.mysql.jdbc.Driver")
+				//.setUrl("jdbc:mysql://localhost:3306/mybatisplus")
+				//.setUsername("root")
+				//.setPassword("123456");
+				.setDriverName("oracle.jdbc.OracleDriver")
+				.setUrl("jdbc:oracle:thin:@localhost:1521:orcl")
+				.setUsername("scott")
+				.setPassword("scott");
 
 		//策略配置
 		StrategyConfig strategyConfig = new StrategyConfig();
 		strategyConfig.setCapitalMode(true)  //全局大写命名
 				.setDbColumnUnderline(true)  //指定表名 字段名是否使用下划线
 				.setNaming(NamingStrategy.underline_to_camel)  //数据据映射到实体类的命名策略
-				.setTablePrefix("tbl_")  //表前缀
-				.setInclude("tbl_employee");  //要生成数据库的表
+				.setTablePrefix("t_")  //表前缀
+				.setInclude("t_user");  //要生成数据库的表
 		// 排除生成的表
 		//strategy.setInclude(INCLUD_TABLE.split(",")); // 需要生成的表
 		// 自定义实体父类
@@ -86,13 +92,13 @@ public class TestMP {
 
 		// 自定义模板配置，可以 copy 源码 mybatis-plus/src/main/resources/templates 下面内容修改，
 		// 放置自己项目的 src/main/resources/templates 目录下, 默认名称一下可以不配置，也可以自定义模板名称
-		TemplateConfig templateConfig = new TemplateConfig();
-		templateConfig.setController("/templates/controller.java.vm");
-		templateConfig.setEntity("/templates/entity.java.vm");
-		templateConfig.setMapper("/templates/mapper.java.vm");
-		templateConfig.setXml("/templates/mapper.xml.vm");
-		templateConfig.setService("/templates/service.java.vm");
-		templateConfig.setServiceImpl("/templates/serviceImpl.java.vm");
+		//TemplateConfig templateConfig = new TemplateConfig();
+		//templateConfig.setController("/templates/controller.java.vm");
+		//templateConfig.setEntity("/templates/entity.java.vm");
+		//templateConfig.setMapper("/templates/mapper.java.vm");
+		//templateConfig.setXml("/templates/mapper.xml.vm");
+		//templateConfig.setService("/templates/service.java.vm");
+		//templateConfig.setServiceImpl("/templates/serviceImpl.java.vm");
 		// 如上任何一个模块如果设置 空 OR Null 将不生成该模块。
 
 		//执行

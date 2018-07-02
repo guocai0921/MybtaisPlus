@@ -3,19 +3,17 @@ package com.guocai.mp.test;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.guocai.mp.entity.Employee;
-import com.guocai.mp.mapper.EmployeeMapper;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import javax.management.NotificationEmitter;
 import java.util.List;
 
 /**
  * java类简单作用描述
  *
  * @ClassName: TestActiveRecord
- * @Package: com.guocai.mp.test
+ * @Package: com.guocai.mp.mp
  * @Description: <  >
  * @Author: Sun GuoCai
  * @CreateDate: 2018/6/28 13:22
