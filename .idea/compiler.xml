@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="jdk8" />
         <module name="mp01" />
         <module name="mp02" />
         <module name="mp03" />
@@ -15,6 +16,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="jdk8" target="1.8" />
+      <module name="MMapper01" target="1.5" />
       <module name="mp" target="1.5" />
       <module name="mp01" target="1.5" />
       <module name="mp02" target="1.5" />

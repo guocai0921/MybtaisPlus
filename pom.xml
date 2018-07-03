@@ -15,6 +15,7 @@
         <module>mp04</module>
         <module>mp05</module>
         <module>mp06</module>
+        <module>jdk8</module>
     </modules>
 
     <dependencies>
